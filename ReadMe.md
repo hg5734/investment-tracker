@@ -98,7 +98,7 @@ abstract class AdapterRegistry {
     ...
 }
 ```
-![Alt text](assets/Itracker.drawio.png?raw=true "Title")
+![Alt text](./asset/Itracker.png?raw=true "Title")
 
 ---
 
