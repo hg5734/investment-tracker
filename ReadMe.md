@@ -12,10 +12,15 @@ It provides user assets details on DeFi protocols by querying on blockchain at r
 - **Protocol Adapter** is a Interface between external protocols and adapter registry. we have different type adapter based on protocol. Ex:
 
 **1.** staking-adapter provides user staking details protocols ex: Harvest Finance, DodoExchange
+
 **2.** lending-adapter provides user lending details of protocols ex: Aave, Compound etc
+
 **3.** borrowing-adapter provides user borrowing details of protocols ex: Aave, Compound etc
+
 **4.** liquidity-adapter provides user liquidity pool details of protocols ex: Dodo Exchange, Balancer etc
+
 **5.** derivatives-adapter provides derivate details of protocols ex: Rari Capital, BarnBridge etc.
+
 **6.** assets-adapter provides all user holding in erc20 token formats ex: USDC, USDT, DAI etc
 
 Each defi adaptor inherits abstract **ProtocolAdapter**
@@ -93,10 +98,8 @@ abstract class AdapterRegistry {
     ...
 }
 ```
+![Alt text](assets/Itracker.drawio.png?raw=true "Title")
 
-<p align="center">
-  <img src="https://drive.google.com/file/d/16YpoKHfdTfJ4dwgXgoWP_BX2nh9pBiVm/view" width="600">
-</p>
 ---
 
 # General functions 
