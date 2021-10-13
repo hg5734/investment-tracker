@@ -98,11 +98,12 @@ abstract class AdapterRegistry {
     ...
 }
 ```
+
 ![Alt text](./asset/Itracker.png?raw=true "Title")
 
 ---
 
-# General functions 
+# General functions
 
 - Multi chain support
 
@@ -119,7 +120,7 @@ getContractABI(chain:string, name:string);
 
 ```
 
-- Token metadata and price support 
+- Token metadata and price support
 
 ```typescript
 
@@ -145,4 +146,129 @@ getTokenPriceFromCMC(tokenId:number[]);
 ```
 
 ---
+
+# Technology Stack
+
+       --------------------------------------- |---------------------------------------
+       |  Technology                           | Language
+       --------------------------------------- | ---------------------------------------
+       | Ethereum                              | Solidity
+       | Polygon                               | Solidity
+       | FTM                                   | Solidity
+       | BSC                                   | Solidity
+       | Avalanche                             | Solidity
+       | Terra                                 | Rust
+       | Solana                                | RUST
+       | SMS/Email Notification                | AWS SNS Services
+       | Frontend                              | ReactJs
+       | Monitoring Service                    | NodeJs/web3/ethers js/Mongodb
+       | Reporting Service                     | NodeJs/web3/ethers Js/Mongodb
+       | Price Manager Service                 | NodeJs/web3/ethers Js/Mongodb
+       | API Service                           | NodeJs/web3/ethers Js/Mongodb
+
+---
+
+# API Service
+
+**1. API for present Investment Report**
+
+```javascript
+endpoint -> api/v1/investment/report
+Method: Get
+QueryParam:
+{
+address : "0x7334b486828fcbe6e475ac84fff767bf0f706452",
+chain: "ethereum", <ftm,polygon,bsc,ethereum,all>
+type: "excel/json"
+}
+Response <JSON, Excel>
+{
+   isSuccess: true,
+   result :[{
+       chain: 'ethereum',
+       protocol: 'harvest-finance',
+       address:"0x7978783384..."
+       assets: [{
+           name: "DAI",
+           balance: 34343,
+           address:"0x7978783384...",
+           balanceInUSD: 343434,
+       },
+       {
+           name: "Uniswap ETH-USDC LP",
+           balance: 34343,
+           balanceInUSD: 343434,
+           address:"0x7978783384...",
+       }
+       ...
+    ]
+   }]
+}
+
+```
+
+**2. API for historical Investment Report**
+
+```javascript
+endpoint -> api/v1/investment/report
+
+Method: Get
+QueryParam:
+{
+address : "0x7334b486828fcbe6e475ac84fff767bf0f706452",
+chain: "ethereum", <ftm,polygon,bsc,ethereum>
+protocol: "dodo" <optional>, // To fetch single protocol details
+type: "excel/json",
+durationType: "days", // Ex: days, weekly, monthly, yearly
+duration : 4 <optional>,// Ex: 4 days, 4 weeks, 4 months, 4 years
+startDate: 1334114310, <optional>
+endDate: 1634114310 <optional>
+}
+
+Response <JSON, Excel>
+{
+   isSuccess: true,
+   result :[{
+       chain: 'ethereum',
+       protocol: 'harvest-finance',
+       durationType: 'weekly
+       address:"0x7978783384..."
+       assets: [{
+           name: "DAI",
+           balance: 34343,
+           address:"0x7978783384...",
+           balanceInUSD: 343434,
+           historicalData :[{
+               date: "1634114734", //13 oct 2021
+               balance: 14321244444444,
+            },{
+               date: "1633595910", //7 oct 2021
+               balance: 12321244444444,
+            },
+            {
+               date: "1633077510", //1 oct 2021
+               balance: 14321244444444,
+            }
+            ...
+            ]
+       },
+       ...
+    ]
+   }]
+}
+```
+--- 
+
+# Reporting & Monitoring Service
+
+It provides details of investments in time frame. It's a separate service which run **cron job** periodically at background to track all protocol investments and stores data in our database to perform analysis.
+
+This service fetch information from **Adapter Registry** for all the chains. It also monitor the balances, if balances goes down from particular threshold from protocol it alerts via SMS, Email.
+
+
+
+
+
+
+
 
