@@ -1,0 +1,35 @@
+{
+  "name": "investment-tracker",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx hardhat compile",
+    "fork": "npx hardhat node --network forking",
+    "deploy": "npx hardhat run scripts/deploy.js",
+    "local": "npx hardhat node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hg5734/investment-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hg5734/investment-tracker/issues"
+  },
+  "homepage": "https://github.com/hg5734/investment-tracker#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.4.7",
+    "hardhat": "^2.6.5"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  }
+}
