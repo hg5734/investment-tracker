@@ -257,6 +257,29 @@ Response <JSON, Excel>
    }]
 }
 ```
+
+**3. API for add address protocol monitoring and alert through email/sms when protocol balance down from particular threshold**
+
+```javascript
+endpoint -> api/v1/investment/
+
+Method: POST
+Request:
+{
+address : "0x7334b486828fcbe6e475ac84fff767bf0f706452",
+chain: "ethereum"
+}
+
+Response
+{
+   isSuccess: true,
+   result : {
+       message: "address added for monitoring"
+   }
+
+}
+```
+
 --- 
 
 # Reporting & Monitoring Service
@@ -269,6 +292,28 @@ This service fetch information from **Adapter Registry** for all the chains. It 
 
 ---
 
+# Contract process flow
+
+1. deploy adaptor registry contract. one time deployment fees on chain.
+
+2. deploy protocol adaptors contract on chain. Each protocol has own adaptor. It's one time deployment fees for each protocol adaptor
+
+3. add protocol adaptor in registry. it's one time transaction fees for each protocol
+
+```javascript
+
+  function addProtocol(bytes32 calldata name, address calldata adapter,address[] calldata tokens) external onlyOwner
+
+```
+
+4. getBalance and getProtocolBalance are view function. won't consume any gas fees.
+```javascript
+
+getBalances(account: string,  chain: string) : TokenBal[];
+
+getProtocolBalance(account: string, name: string, chain: string) : TokenBal[];
+
+```
 
 
 
