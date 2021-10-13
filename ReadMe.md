@@ -23,7 +23,7 @@ It provides user assets details on DeFi protocols by querying on blockchain at r
 
 **6.** assets-adapter provides all user holding in erc20 token formats ex: USDC, USDT, DAI etc
 
-Each defi adaptor inherits abstract **ProtocolAdapter**
+Each defi adapter inherits abstract **ProtocolAdapter**
 
 Smart Contract Example:
 
@@ -47,7 +47,7 @@ abstract class ProtocolAdapter {
 }
 ```
 
-- **Adapter Registry** maintain list of all protocol adapters. User interact with adaptor registry to know the protocol balances. We can add, modify, delete adaptors from registry.
+- **Adapter Registry** maintain list of all protocol adapters. User interact with adapter registry to know the protocol balances. We can add, modify, delete adapters from registry.
 
 Smart Contract Example:
 
@@ -265,6 +265,9 @@ It provides details of investments in time frame. It's a separate service which 
 
 This service fetch information from **Adapter Registry** for all the chains. It also monitor the balances, if balances goes down from particular threshold from protocol it alerts via SMS, Email.
 
+![Alt text](./asset/investservice.png.png?raw=true "Title")
+
+---
 
 
 
