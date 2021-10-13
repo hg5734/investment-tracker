@@ -265,7 +265,7 @@ It provides details of investments in time frame. It's a separate service which 
 
 This service fetch information from **Adapter Registry** for all the chains. It also monitor the balances, if balances goes down from particular threshold from protocol it alerts via SMS, Email.
 
-![Alt text](./asset/investservice.png.png?raw=true "Title")
+![Alt text](./asset/investservice.png?raw=true "Title")
 
 ---
 
