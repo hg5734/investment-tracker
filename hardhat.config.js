@@ -1,4 +1,7 @@
 require("@nomiclabs/hardhat-waffle");
+require('hardhat-deploy');
+require("@nomiclabs/hardhat-web3");
+require("hardhat-gas-reporter");
 
 require('dotenv').config();
 
@@ -30,7 +33,10 @@ module.exports = {
       blockNumber: 13319416
     }
   },
+  namedAccounts: {
+    deployer: 0,
+  },
   mocha: {
     timeout: 100000
-  },
+  }
 };
