@@ -2,6 +2,7 @@
 
 pragma solidity 0.8.3;
 
+import "hardhat/console.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "./AdapterRegistryStorage.sol";
 import "./adapters/ProtocolAdapter.sol";
@@ -79,13 +80,14 @@ contract AdapterRegistry is Ownable, AdapterRegistryStorage {
 
     function getBalances(address account)
         external
+        view
         returns (AdapterBalance[] memory)
     {
         AdapterBalance[] memory adapterBalances = getAdapterBalances(
             _protocolAdapterNames,
             account
         );
-
+        // console.log("Sender balance is %s tokens", adapterBalances);
         (
             uint256 nonZeroAdapterBalancesNumber,
             uint256[] memory nonZeroTokenBalancesNumbers
@@ -102,7 +104,7 @@ contract AdapterRegistry is Ownable, AdapterRegistryStorage {
     function getAdapterBalances(
         bytes32[] memory protocolAdapterNames,
         address account
-    ) public returns (AdapterBalance[] memory) {
+    ) public view returns (AdapterBalance[] memory) {
         uint256 length = protocolAdapterNames.length;
         AdapterBalance[] memory adapterBalances = new AdapterBalance[](length);
 
@@ -121,7 +123,7 @@ contract AdapterRegistry is Ownable, AdapterRegistryStorage {
         bytes32 protocolAdapterName,
         address[] memory tokens,
         address account
-    ) public returns (AdapterBalance memory) {
+    ) public view returns (AdapterBalance memory) {
         address adapter = _protocolAdapterAddress[protocolAdapterName];
         require(adapter != address(0), "AR: bad protocolAdapterName");
 

@@ -18,7 +18,7 @@ module.exports = {
       }
     }
   },
-  defaultNetwork: "kovan",
+  // defaultNetwork: "hardhat",
   networks: {
     development: {
       url: 'http://127.0.0.1:8545'
@@ -29,8 +29,7 @@ module.exports = {
     },
     forking: {
       url: `https://mainnet.infura.io/v3/${process.env.PROVIDER_KEY}`,
-      accounts: [PK],
-      blockNumber: 13319416
+      blockNumber: 13393098
     }
   },
   namedAccounts: {

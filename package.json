@@ -7,7 +7,7 @@
     "start": "npx hardhat compile",
     "fork": "npx hardhat node --network forking",
     "deploy": "npx hardhat run scripts/deploy.js",
-    "local": "npx hardhat node"
+    "local": "npx hardhat node --network hardhat"
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
     "@nomiclabs/hardhat-web3": "^2.0.0",
     "@openzeppelin/contracts": "^4.3.2",
     "dotenv": "^10.0.0",
-    "hardhat-deploy": "^0.9.3",
+    "hardhat-deploy": "^0.9.4",
     "hardhat-gas-reporter": "^1.0.4",
     "web3": "^1.6.0"
   }

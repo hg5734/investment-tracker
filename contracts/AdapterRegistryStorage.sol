@@ -3,9 +3,9 @@
 pragma solidity 0.8.3;
 
 contract AdapterRegistryStorage {
-    bytes32[] _protocolAdapterNames;
-    mapping(bytes32 => address) _protocolAdapterAddress;
-    mapping(bytes32 => address[]) _protocolAdapterSupportedTokens;
+    bytes32[] public _protocolAdapterNames;
+    mapping(bytes32 => address) public _protocolAdapterAddress;
+    mapping(bytes32 => address[]) public _protocolAdapterSupportedTokens;
 
     struct AdapterBalance {
         bytes32 protocolAdapterName;
