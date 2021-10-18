@@ -1,5 +1,5 @@
 const hre = require("hardhat");
-
+const { displayBalance } = require('../utils')
 const { expect } = require('chai');
 
 const user = "0x3da9d911301f8144bdf5c3c67886e5373dcdff8e";
@@ -39,14 +39,6 @@ describe('Harvest-Finance', function () {
 
     it('retrieve returns a value previously stored', async function () {
         const balances = await this.adapterRegistry.getBalances(user);
-        for (let i = 0; i < balances.length; i++) {
-            let protocol = balances[i];
-            let tokens = protocol[1];
-            for (let j = 0; j < tokens.length; j++) {
-                console.log({
-                    [tokens[j][0]] : tokens[j][1].toString()
-                });
-            }
-        }
+        displayBalance(balances);
     });
 });
