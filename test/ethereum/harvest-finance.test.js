@@ -1,12 +1,13 @@
 const hre = require("hardhat");
-const { displayBalance } = require('../utils')
+const { displayBalance, users } = require('../utils')
 const { expect } = require('chai');
-
-const user = "0x3da9d911301f8144bdf5c3c67886e5373dcdff8e";
 const adapterName = "HFProtocolAdapter";
-const fweth = "0xFE09e53A81Fe2808bc493ea64319109B5bAa573e";
-const ftricrypto = "0x33ED34dD7C40EF807356316B484d595dDDA832ab";
-let tokens = [fweth, ftricrypto]
+
+const fdai = "0x15d3A64B2d5ab9E152F16593Cdebc4bB165B5B4A";
+const fusdc = "0x4F7c28cCb0F1Dbd1388209C67eEc234273C878Bd";
+const usdp3Crv = "0x15AEB9B209FEC67c672dBF5113827daB0b80f390";
+
+let tokens = [fdai, fusdc, usdp3Crv]
 
 
 // Start test block
@@ -38,7 +39,9 @@ describe('Harvest-Finance', function () {
     })
 
     it('retrieve returns a value previously stored', async function () {
-        const balances = await this.adapterRegistry.getBalances(user);
-        displayBalance(balances);
+        for (let i = 0; i < users.length; i++) {
+            let balances = await this.adapterRegistry.getBalances(users[i]);
+            displayBalance(users[i], balances);
+        }
     });
 });

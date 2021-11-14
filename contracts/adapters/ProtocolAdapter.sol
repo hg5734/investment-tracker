@@ -3,5 +3,21 @@
 pragma solidity 0.8.3;
 
 abstract contract ProtocolAdapter {
-    function getBalance(address token, address account) public view virtual returns (int256);
+    struct Token {
+        address token;
+        int256 amount;
+        uint8 decimals;
+    }
+
+    function getBalance(address token, address account)
+        public
+        virtual
+        view
+        returns (int256, uint8);
+
+    function getUnclamedRewards(address token, address account)
+        public
+        virtual
+        view
+        returns (Token[] memory);
 }

@@ -12,8 +12,16 @@ contract AdapterRegistryStorage {
         TokenBalance[] tokenBalances;
     }
 
+    struct Token {
+        address token;
+        int256 amount;
+        uint8 decimals;
+    }
+
     struct TokenBalance {
         address token;
         int256 amount;
+        uint8 decimals;
+        Token[] rewards;
     }
 }

@@ -133,16 +133,22 @@ contract AdapterRegistry is Ownable, AdapterRegistryStorage {
         for (uint256 i = 0; i < length; i++) {
             try
                 ProtocolAdapter(adapter).getBalance(tokens[i], account)
-            returns (int256 amount) {
+            returns (int256 amount, uint8 decimals) {
                 tokenBalances[i] = TokenBalance({
                     token: tokens[i],
-                    amount: amount
+                    amount: amount,
+                    decimals: decimals,
+                    rewards:  new Token[](1)
                 });
             } catch {
-                tokenBalances[i] = TokenBalance({token: tokens[i], amount: 0});
+                tokenBalances[i] = TokenBalance({
+                    token: tokens[i],
+                    amount: 0,
+                    decimals: 0,
+                    rewards: new Token[](1)
+                });
             }
         }
-
         return
             AdapterBalance({
                 protocolAdapterName: protocolAdapterName,
@@ -226,5 +232,4 @@ contract AdapterRegistry is Ownable, AdapterRegistryStorage {
         }
         return nonZeroTokenBalances;
     }
-    
 }
