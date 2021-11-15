@@ -134,11 +134,12 @@ contract AdapterRegistry is Ownable, AdapterRegistryStorage {
             try
                 ProtocolAdapter(adapter).getBalance(tokens[i], account)
             returns (int256 amount, uint8 decimals) {
+                 Token[] memory rewards = ProtocolAdapter(adapter).getUnclamedRewards(tokens[i], account);
                 tokenBalances[i] = TokenBalance({
                     token: tokens[i],
                     amount: amount,
                     decimals: decimals,
-                    rewards:  new Token[](1)
+                    rewards:  rewards
                 });
             } catch {
                 tokenBalances[i] = TokenBalance({

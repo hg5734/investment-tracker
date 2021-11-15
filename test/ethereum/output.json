@@ -1,0 +1,41 @@
+{
+    "user": "0x7334b486828fcbe6e475ac84fff767bf0f706452",
+    "assets": [
+        {
+            "address": "0x15d3A64B2d5ab9E152F16593Cdebc4bB165B5B4A",
+            "balance": "5002738959605961765040278",
+            "decimals": "18",
+            "rewards": [
+                {
+                    "address": "0xa0246c9032bC3A600820415aE600c6388619A14D",
+                    "balance": "9480482023724127530",
+                    "decimals": "18"
+                }
+            ]
+        },
+        {
+            "address": "0x4F7c28cCb0F1Dbd1388209C67eEc234273C878Bd",
+            "balance": "2000002399611",
+            "decimals": "6",
+            "rewards": [
+                {
+                    "address": "0xa0246c9032bC3A600820415aE600c6388619A14D",
+                    "balance": "6629083148495135031",
+                    "decimals": "18"
+                }
+            ]
+        },
+        {
+            "address": "0x15AEB9B209FEC67c672dBF5113827daB0b80f390",
+            "balance": "500634708908424722275892",
+            "decimals": "18",
+            "rewards": [
+                {
+                    "address": "0x1571eD0bed4D987fe2b498DdBaE7DFA19519F651",
+                    "balance": "2271412471889060914",
+                    "decimals": "18"
+                }
+            ]
+        }
+    ]
+}

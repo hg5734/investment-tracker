@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: MIT
 
 pragma solidity 0.8.3;
+import "./AdapterStorage.sol";
 
-contract AdapterRegistryStorage {
+contract AdapterRegistryStorage is AdapterStorage {
     bytes32[] public _protocolAdapterNames;
     mapping(bytes32 => address) public _protocolAdapterAddress;
     mapping(bytes32 => address[]) public _protocolAdapterSupportedTokens;
@@ -10,12 +11,6 @@ contract AdapterRegistryStorage {
     struct AdapterBalance {
         bytes32 protocolAdapterName;
         TokenBalance[] tokenBalances;
-    }
-
-    struct Token {
-        address token;
-        int256 amount;
-        uint8 decimals;
     }
 
     struct TokenBalance {
