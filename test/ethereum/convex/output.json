@@ -1,0 +1,56 @@
+{
+    "user": "0x7334b486828fcbe6e475ac84fff767bf0f706452",
+    "assets": [
+        {
+            "address": "0xFd5AbF66b003881b88567EB9Ed9c651F14Dc4771",
+            "balance": "3970452386237122275037962",
+            "decimals": "18",
+            "rewards": [
+                {
+                    "address": "0xD533a949740bb3306d119CC777fa900bA034cd52",
+                    "balance": "2700216472538647564",
+                    "decimals": "18"
+                },
+                {
+                    "address": "0x090185f2135308BaD17527004364eBcC2D37e5F6",
+                    "balance": "569808856959907860937",
+                    "decimals": "18"
+                }
+            ]
+        },
+        {
+            "address": "0x02E2151D4F351881017ABdF2DD2b51150841d5B3",
+            "balance": "3506897284381639746947744",
+            "decimals": "18",
+            "rewards": [
+                {
+                    "address": "0xD533a949740bb3306d119CC777fa900bA034cd52",
+                    "balance": "1632574844830334311",
+                    "decimals": "18"
+                },
+                {
+                    "address": "0xdBdb4d16EdA451D0503b854CF79D55697F90c8DF",
+                    "balance": "20115848926414237",
+                    "decimals": "18"
+                }
+            ]
+        },
+        {
+            "address": "0xB900EF131301B307dB5eFcbed9DBb50A3e209B2e",
+            "balance": "1525140954516906447994877",
+            "decimals": "18",
+            "rewards": [
+                {
+                    "address": "0xD533a949740bb3306d119CC777fa900bA034cd52",
+                    "balance": "1429773132873831881",
+                    "decimals": "18"
+                },
+                {
+                    "address": "0x3432B6A60D23Ca0dFCa7761B7ab56459D9C964D0",
+                    "balance": "24580293030160642",
+                    "decimals": "18"
+                }
+            ]
+        }
+    ]
+}
