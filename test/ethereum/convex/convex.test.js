@@ -1,6 +1,6 @@
 
 const hre = require("hardhat");
-const { displayBalance, users } = require('../utils')
+const { displayBalance, users } = require('../../utils')
 const { expect } = require('chai');
 const adapterName = "ConvexProtocolAdapter";
 
@@ -8,6 +8,7 @@ const mim3Crv = "0xFd5AbF66b003881b88567EB9Ed9c651F14Dc4771";
 const allUsd3Crv = "0x02E2151D4F351881017ABdF2DD2b51150841d5B3";
 const frax3Crv = "0xB900EF131301B307dB5eFcbed9DBb50A3e209B2e";
 
+const cvxrewards = "0xCF50b810E57Ac33B91dCF525C6ddd9881B139332";
 let tokens = [mim3Crv, allUsd3Crv, frax3Crv]
 
 

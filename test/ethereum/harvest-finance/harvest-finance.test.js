@@ -1,5 +1,5 @@
 const hre = require("hardhat");
-const { displayBalance, users } = require('../utils')
+const { displayBalance, users } = require('../../utils')
 const { expect } = require('chai');
 const adapterName = "HFProtocolAdapter";
 
