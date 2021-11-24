@@ -1,0 +1,17 @@
+{
+    "user": "0x7334b486828fcbe6e475ac84fff767bf0f706452",
+    "assets": [
+        {
+            "address": "0x1A4F8705E1C0428D020e1558A371b7E6134455A2",
+            "balance": "3876610577191458858474455",
+            "decimals": "18",
+            "rewards": [
+                {
+                    "address": "0x43Dfc4159D86F3A37A5A4B3D4580b888ad7d4DDd",
+                    "balance": "8008801365503224563842",
+                    "decimals": "18"
+                }
+            ]
+        }
+    ]
+}
