@@ -10,7 +10,7 @@ let tokens = [usdtDai]
 
 // Start test block
 describe('DoDo-Finance', function () {
-    const protocolName = `${web3.eth.abi.encodeParameter('bytes32', web3.utils.toHex('harvest-finance'))}`;
+    const protocolName = `${web3.eth.abi.encodeParameter('bytes32', web3.utils.toHex('dodo-finance'))}`;
 
     before(async function () {
         const { getNamedAccounts } = hre;

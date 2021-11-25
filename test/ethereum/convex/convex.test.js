@@ -14,7 +14,7 @@ let tokens = [mim3Crv, allUsd3Crv, frax3Crv]
 
 // Start test block
 describe('Convex-Finance', function () {
-    const protocolName = `${web3.eth.abi.encodeParameter('bytes32', web3.utils.toHex('harvest-finance'))}`;
+    const protocolName = `${web3.eth.abi.encodeParameter('bytes32', web3.utils.toHex('convex-finance'))}`;
 
     before(async function () {
         const { getNamedAccounts } = hre;

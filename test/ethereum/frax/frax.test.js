@@ -12,7 +12,7 @@ let tokens = [uni_dai_frax, uni_usdc_frax ]
 
 // Start test block
 describe('Frax-Finance-lp', function () {
-    const protocolName = `${web3.eth.abi.encodeParameter('bytes32', web3.utils.toHex('harvest-finance'))}`;
+    const protocolName = `${web3.eth.abi.encodeParameter('bytes32', web3.utils.toHex('frax-finance-lp'))}`;
 
     before(async function () {
         const { getNamedAccounts } = hre;
