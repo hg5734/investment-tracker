@@ -142,6 +142,7 @@ contract AdapterRegistry is Ownable, AdapterRegistryStorage {
                     rewards:  rewards
                 });
             } catch {
+                console.log("error");
                 tokenBalances[i] = TokenBalance({
                     token: tokens[i],
                     amount: 0,

@@ -2,14 +2,16 @@
 const hre = require("hardhat");
 const { displayBalance, users } = require('../../utils')
 const { expect } = require('chai');
-const adapterName = "DoDoProtocolAdapter";
+const adapterName = "FraxProtocolAdapter";
 
-const usdtDai = "0x1a4f8705e1c0428d020e1558a371b7e6134455a2";
-let tokens = [usdtDai]
+const uni_dai_frax = "0xF22471AC2156B489CC4a59092c56713F813ff53e";
+const uni_usdc_frax = "0x3EF26504dbc8Dd7B7aa3E97Bc9f3813a9FC0B4B0";
+
+let tokens = [uni_dai_frax, uni_usdc_frax ]
 
 
 // Start test block
-describe('DoDo-Finance', function () {
+describe('Frax-Finance-lp', function () {
     const protocolName = `${web3.eth.abi.encodeParameter('bytes32', web3.utils.toHex('harvest-finance'))}`;
 
     before(async function () {

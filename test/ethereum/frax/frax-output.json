@@ -1,0 +1,62 @@
+{
+    "user": "0x7334b486828fcbe6e475ac84fff767bf0f706452",
+    "assets": [
+        {
+            "address": "0xF22471AC2156B489CC4a59092c56713F813ff53e",
+            "balance": "2008663962050169522590102",
+            "decimals": "18",
+            "rewards": [
+                {
+                    "address": "0x3432B6A60D23Ca0dFCa7761B7ab56459D9C964D0",
+                    "balance": "611813077115684278927",
+                    "decimals": "18"
+                }
+            ]
+        },
+        {
+            "address": "0x3EF26504dbc8Dd7B7aa3E97Bc9f3813a9FC0B4B0",
+            "balance": "1980570808645145116410760",
+            "decimals": "18",
+            "rewards": [
+                {
+                    "address": "0x3432B6A60D23Ca0dFCa7761B7ab56459D9C964D0",
+                    "balance": "595618643677250311257",
+                    "decimals": "18"
+                }
+            ]
+        }
+    ]
+}
+{
+    "user": "0xd0b422d70120cc755422bd9b7aecbfa20ad720b8",
+    "assets": [
+        {
+            "address": "0xF22471AC2156B489CC4a59092c56713F813ff53e",
+            "balance": "696000436990473583216123",
+            "decimals": "18",
+            "rewards": [
+                {
+                    "address": "0x3432B6A60D23Ca0dFCa7761B7ab56459D9C964D0",
+                    "balance": "607549847867658739019",
+                    "decimals": "18"
+                }
+            ]
+        },
+        {
+            "address": "0x3EF26504dbc8Dd7B7aa3E97Bc9f3813a9FC0B4B0",
+            "balance": "327923519301334430161223",
+            "decimals": "18",
+            "rewards": [
+                {
+                    "address": "0x3432B6A60D23Ca0dFCa7761B7ab56459D9C964D0",
+                    "balance": "494312188649066298471",
+                    "decimals": "18"
+                }
+            ]
+        }
+    ]
+}
+{
+    "user": "0x80b2db70c3fb23e42a52bba84c5064e0175e6167",
+    "assets": []
+}
