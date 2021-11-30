@@ -1,0 +1,28 @@
+{
+    "user": "0x7334b486828fcbe6e475ac84fff767bf0f706452",
+    "assets": [
+        {
+            "address": "0x3B96d491f067912D18563d56858Ba7d6EC67a6fa",
+            "balance": "5025599034901080070754668",
+            "decimals": "18",
+            "rewards": []
+        }
+    ]
+}
+{
+    "user": "0xd0b422d70120cc755422bd9b7aecbfa20ad720b8",
+    "assets": [
+        {
+            "address": "0x3B96d491f067912D18563d56858Ba7d6EC67a6fa",
+            "balance": "606974621698460690205681",
+            "decimals": "18",
+            "rewards": []
+        },
+        {
+            "address": "0xB4AdA607B9d6b2c9Ee07A275e9616B84AC560139",
+            "balance": "650503119415244777621928",
+            "decimals": "18",
+            "rewards": []
+        }
+    ]
+}
